@@ -1,0 +1,76 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[textwidth=40em,tmargin=75mm,bmargin=35mm]{geometry}
+
+\usepackage{calc,amsmath,fontspec,xunicode,tocloft,tabu,paralist,enumitem,eso-pic,graphicx,datetime2,multicol,pgfornament}
+\setdefaultleftmargin{2em}{2em}{1em}{1em}{1em}{1em}
+
+\usepackage{datetime2}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+	colorlinks=false,
+	pdfpagemode=FullScreen
+}
+
+
+\usepackage{xeCJK,xeCJKfntef}
+\newcommand{\myvphantom}[0]{\vphantom{QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890ςρθδφγηξλζχψβμ\"A}}
+\xeCJKsetup{PunctStyle=plain,RubberPunctSkip=false,CJKglue=\myvphantom\hskip 0pt,CJKecglue=\myvphantom\hskip 0.22em plus 200pt}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt
+
+
+\setmainfont[Numbers=Lining]{Brygada 1918}
+\setromanfont[Numbers=Lining]{Brygada 1918}
+\setsansfont[Numbers=Lining]{Alegreya Sans}
+\setmonofont{Elite Math}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKromanfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans CJK SC}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{8pt}
+\linespread{1.17}
+\frenchspacing
+\pagestyle{empty}
+
+\AddToShipoutPictureBG{
+	\put(0mm,260mm){%
+		\begin{minipage}{\paperwidth}%
+			\noindent\begin{center}%
+				\noindent\parbox{40em}{
+                    \rmfamily
+					\scshape
+
+                    \begin{center}
+                        \pgfornament[width=45mm]{68}
+                    \end{center}
+                    \vskip 10pt
+
+					% Königliche\hfill Familie\hfill von\hfill Immerherbstreich
+                    I\hfill M\hfill M\hfill E\hfill R\hfill H\hfill E\hfill R\hfill B\hfill S\hfill T\hfill R\hfill E\hfill I\hfill C\hfill H
+
+                    \vskip 10pt\hrule
+				}
+			\end{center}
+		\end{minipage}%
+	}%
+}
+
+
+\newcommand{\sendletterto}[1]{
+	\noindent\begin{minipage}{\linewidth}
+        \ttfamily
+		\small
+		\scshape
+		#1
+	\end{minipage}\par\vskip 40pt
+}
+\newcommand{\lettersig}[1]{
+    \vskip 40pt\vfill
+	\noindent\begin{minipage}{\linewidth}
+        \normalsize\ttfamily
+		\flushright#1
+	\end{minipage}\par
+    \vfill\vskip 40pt
+}
