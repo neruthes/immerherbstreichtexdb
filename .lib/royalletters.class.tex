@@ -1,5 +1,5 @@
-\documentclass[10pt,a4paper]{article}
-\usepackage[textwidth=40em,tmargin=75mm,bmargin=35mm]{geometry}
+\documentclass[11pt,a4paper]{article}
+\usepackage[textwidth=37em,tmargin=79mm,bmargin=35mm]{geometry}
 
 \usepackage{calc,amsmath,fontspec,xunicode,tocloft,tabu,paralist,enumitem,eso-pic,graphicx,datetime2,multicol,pgfornament}
 \setdefaultleftmargin{2em}{2em}{1em}{1em}{1em}{1em}
@@ -28,29 +28,40 @@
 \setCJKsansfont{Noto Sans CJK SC}
 \setCJKmonofont{Noto Sans CJK SC}
 
-\setlength{\parindent}{0em}
+\setlength{\parindent}{2em}
 \setlength{\parskip}{8pt}
 \linespread{1.17}
 \frenchspacing
 \pagestyle{empty}
 
 \AddToShipoutPictureBG{
-	\put(0mm,260mm){%
+	\put(0mm,255mm){%
 		\begin{minipage}{\paperwidth}%
 			\noindent\begin{center}%
-				\noindent\parbox{40em}{
-                    \rmfamily
+				\noindent\parbox{43em}{
+					\rmfamily
 					\scshape
+					\pgfornament[width=15mm]{61}\hfill%
+					\pgfornament[width=45mm,anchor=north]{68}\hfill%
+					\pgfornament[width=15mm]{62}
 
-                    \begin{center}
-                        \pgfornament[width=45mm]{68}
-                    \end{center}
-                    \vskip 10pt
+					\vskip 20pt
 
-					% Königliche\hfill Familie\hfill von\hfill Immerherbstreich
-                    I\hfill M\hfill M\hfill E\hfill R\hfill H\hfill E\hfill R\hfill B\hfill S\hfill T\hfill R\hfill E\hfill I\hfill C\hfill H
-
-                    \vskip 10pt\hrule
+					\begin{center}
+						% \parbox{37em}{I\hfill M\hfill M\hfill E\hfill R\hfill H\hfill E\hfill R\hfill B\hfill S\hfill T\hfill R\hfill E\hfill I\hfill C\hfill H}
+						\parbox{37em}{\center\scshape Herbstnachtschloss~~der~~Immerherbstreich}
+                        \rule{37em}{0.5pt}
+					\end{center}
+				}
+			\end{center}
+		\end{minipage}%
+	}%
+	\put(0mm,24mm){%
+		\begin{minipage}{\paperwidth}%
+			\noindent\begin{center}%
+				\noindent\parbox{43em}{
+					\pgfornament[width=15mm,symmetry=h]{61}\hfill%
+					\pgfornament[width=15mm,symmetry=h]{62}
 				}
 			\end{center}
 		\end{minipage}%
@@ -60,17 +71,19 @@
 
 \newcommand{\sendletterto}[1]{
 	\noindent\begin{minipage}{\linewidth}
-        \ttfamily
+		\ttfamily
 		\small
 		\scshape
 		#1
 	\end{minipage}\par\vskip 40pt
 }
 \newcommand{\lettersig}[1]{
-    \vskip 40pt\vfill
+	\vskip 60pt
 	\noindent\begin{minipage}{\linewidth}
-        \normalsize\ttfamily
+		% \LARGE
+		% \ttfamily
+		\rmfamily
+		% \fontspec{Imperial Script}
 		\flushright#1
 	\end{minipage}\par
-    \vfill\vskip 40pt
 }
