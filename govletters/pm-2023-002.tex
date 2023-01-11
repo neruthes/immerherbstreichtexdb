@@ -1,0 +1,209 @@
+\input{.lib/govletters.class.tex}
+\usepackage{lipsum}
+
+\newlength{\tmpdima}
+
+\renewcommand{\letterheadgoventity}{Nummer 8}
+
+\newcommand{\examplebox}[2]{
+    % argv: caption, content
+    \begin{center}%
+        \fboxsep=1.5em
+        \fbox{%
+            \begin{minipage}{\textwidth-4em-3em}%
+                #2%
+            \end{minipage}%
+        }\par
+        \footnotesize\sffamily#1
+    \end{center}\par
+}
+
+\begin{document}
+\letterisfrom{
+	Nummer 8\\
+	8 Nachtrabe Allee\\
+	Kramuchdort 10000\\
+	Immerherbstreich
+}
+
+\sendletterto{
+	Broadcast for:\\
+	\textbf{All Government Entities of the Reich}\par
+	Subject:\\
+	\textbf{Government Visual Identity Guidelines Version 1}
+}
+
+\noindent
+Dear Colleagues,
+
+As the Reichskanzler of the Reich, I am writing this broadcast for all colleagues
+in all government entities of the Reich, to announce the latest
+Government Visual Identity Guidelines.
+
+These guidelines are applicable for all government entities,
+but not for Herbstnachtschloss --- the sovereign may instate its own standards.
+Also, Reichsrat, Reichstag, and the judicial system are beyond my control.
+They might perhaps follow these guidelines voluntarily, but it is their choice.
+
+
+\section{Typography}
+
+In most cases, Lora shall be used in all formal government communications.
+These communications include letters, announcements, publications, posters, banners, and websites.
+
+For text of smaller sizes (e.g. captions, footnotes, and auxiliary text), it is fine to use Nimbus Sans.
+Nimbus Sans may also be used for grand titles and subtitles in posters and similar materials.
+
+The rules above are not applicable for other usages of text, e.g. road signs, information boards, and travel documents.
+
+
+
+\section{Heading of Materials}
+
+\subsection{General Pattern}
+
+The top-left corner shall be used to indicate the owner/publisher of the material.
+The indication consists of two lines.
+The first line shall be bold for static text `\MakeUppercase{Regierung} des \MakeUppercase{Immerherbstreichs}',
+where the second word is lowercase and others are uppercase.
+The second line shall be underlined for the canonical name of the government entity.
+For example, mine is `Nummer 8'.
+
+\examplebox{Example: Generic heading}{
+    \small
+	\bfseries\MakeUppercase{Regierung} des \MakeUppercase{Immerherbstreichs}\par
+	\mdseries\underline{\myvphantom{}Verabreichung für Lebensmitteln und Drogen}
+}
+
+\subsection{Lingual Flexibility}
+
+For materials primarily targeting the audience of other languages, e.g. English,
+the name of the government entity may be spelled in the target language.
+This is particularly appropriate for our diplomatic missions in foreign countries.
+
+\examplebox{Example: Translating the second line}{
+    \small
+	\bfseries\MakeUppercase{Regierung} des \MakeUppercase{Immerherbstreichs}\par
+	\mdseries\underline{\myvphantom{}Embassy of Immerherbstreich at Neoparia Demokratia}
+}
+
+In rare cases of extreme specialty, the first line may be translated.
+
+\examplebox{Example: Translating both lines (English)}{
+    \small
+	\bfseries\MakeUppercase{Government} of \MakeUppercase{Immerherbstreich}\par
+	\mdseries\underline{\myvphantom{}Number 8}
+}
+
+\examplebox{Example: Translating both lines (Chinese)}{
+    \small
+	\bfseries 恒秋净土政府\par
+	\mdseries\underline{\myvphantom{}首相官邸}
+}
+
+\section{Collaboration with Other Organizations}
+
+\subsection{Government as an Equal Partner}
+
+Similar to the generic heading, but it is acceptable to abbreviate the first line into `RIHR'.
+Also, it is no longer necessary to put the logo at the top-left corner.
+There is greater freedom of placement.
+
+Additionally, when the name of the entity is too long, an acronym may be used.
+For example, `Verabreichung für Lebensmitteln und Drogen'
+may be written as `VfLD'.
+
+When acronymizing the government entity name,
+these words should be omitted:
+der, die, das, des, und.
+And these words should be preserved as lowercase:
+für, von.
+When different government entities are having a collision of acronyms,
+Nummer 8 shall coordinate a solution for killing ambiguity.
+
+\examplebox{Example: Government as an equal partner}{
+    \small
+	\settowidth{\tmpdima}{\rmfamily\underline{VfLD}}
+	\hfill
+	\textsf{SomeBrand1}
+	\hfill
+	\parbox{\tmpdima}{\textbf{RIHR}\\\underline{\myvphantom VfLD}}
+	\hfill
+	\myvphantom\par
+	\vskip 20pt
+	\begin{center}
+		\fontspec{QTHelvet-Black}
+        \sffamily\bfseries
+        \LARGE Some Poster Content
+	\end{center}
+	\par
+}
+
+\subsection{Government as a Contributor}
+
+Essentially equivalent to the previous situation.
+
+\examplebox{Example: Government as a contributor}{
+    \small
+	\begin{center}
+		\fontspec{QTHelvet-Black}
+        \sffamily\bfseries
+        \LARGE Some Poster Content
+	\end{center}
+	\par\vskip 20pt
+	\settowidth{\tmpdima}{\rmfamily\underline{Nummer 8}}
+	\textsf{SomeBrand1}
+	\hfill
+	\parbox{\tmpdima}{\textbf{RIHR}\\\underline{\myvphantom Nummer 8}}
+	\hfill
+	\textrm{SomeBrand2}
+}
+
+
+
+
+
+
+\section*{Afterwords}
+
+With this letter, I have attached a sample poster for reference.
+
+\lettersig{
+	Sincerely,\\
+	Kjostolv von Zweistein\\
+	Reichskanzler\\
+	Tue 2023 Feb 07
+}
+\clearpage
+\parindent=0pt
+
+
+
+
+
+\begin{minipage}{\linewidth}
+    \Huge\sffamily\bfseries
+    Example Poster Title\\
+    With a Second Line\par
+\end{minipage}
+\vskip 30pt
+
+
+{\sffamily\LARGE Some Subtitle under the Grand Title}
+
+\vfill
+\columnsep=3em
+\begin{multicols}{2}
+    \lipsum[1-5][1-6]\par
+    \lipsum[1-4][1-3]\par
+\end{multicols}
+\vskip 20pt
+
+{\sffamily\small Some caption at the bottom of the page. Try putting some footnotes here.}
+
+
+
+
+
+
+\end{document}

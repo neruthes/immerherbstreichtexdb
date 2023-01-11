@@ -1,7 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[textwidth=39em,tmargin=61mm,bmargin=35mm]{geometry}
 
-\usepackage{calc,amsmath,fontspec,xunicode,tocloft,tabu,paralist,enumitem,eso-pic,graphicx,datetime2,multicol,pgfornament}
+\usepackage{calc,amsmath,fontspec,xunicode,tocloft,tabu,paralist,enumitem,eso-pic,graphicx,datetime2,multicol,indentfirst}
 \setdefaultleftmargin{2em}{2em}{1em}{1em}{1em}{1em}
 
 \usepackage{datetime2}
@@ -19,8 +19,14 @@
 \XeTeXlinebreakskip = 0pt
 
 
-\setmainfont[Numbers=Lining]{Brygada 1918}
-\setromanfont[Numbers=Lining]{Brygada 1918}
+% \setmainfont[Numbers=Lining]{Brygada 1918}
+% \setromanfont[Numbers=Lining]{Brygada 1918}
+% \setmainfont[Numbers=Lining]{Baskervaldx}
+% \setromanfont[Numbers=Lining]{Baskervaldx}
+% \setmainfont[Numbers=Lining]{Academico}
+% \setromanfont[Numbers=Lining]{Academico}
+\setmainfont[Numbers=Lining]{Lora}
+\setromanfont[Numbers=Lining]{Lora}
 \setsansfont[Numbers=Lining]{Nimbus Sans}
 \setmonofont{Elite Math}
 \setCJKmainfont{Noto Serif CJK SC}
@@ -30,36 +36,38 @@
 
 \setlength{\parindent}{2em}
 \setlength{\parskip}{8pt}
-\linespread{1.22}
+\linespread{1.2}
 \frenchspacing
 \pagestyle{empty}
 
-\newcommand{\letterheadgovbody}{Letterhead Gov Body}
+\newcommand{\letterheadgoventity}{Letterhead Gov Entity}
 
-\AddToShipoutPictureBG{
+\AddToShipoutPictureFG{
 	\put(0mm,265mm){%
 		\begin{minipage}{\paperwidth}%
 			\noindent\begin{center}%
+				\normalsize
 				\noindent\parbox{39em}{
 					\rule{\linewidth}{3pt}
 					\par\vskip 10pt
 
 					\rmfamily
-					\large
+					\normalsize
 					\bfseries
-					\scshape
-					Regierung des Immerherbstreichs
-					\par\vskip 4pt
+					\MakeUppercase{Regierung} des \MakeUppercase{Immerherbstreichs}
+					% Regierung des Immerherbstreichs
+					\par\vskip 0.5em
 
-					\large\mdseries\upshape
-					\underline{\myvphantom\letterheadgovbody}\par
+					\normalsize\mdseries\upshape
+					\underline{\myvphantom\letterheadgoventity}\par
 				}
 			\end{center}
 		\end{minipage}%
 	}%
-	\put(0mm,24mm){%
+	\put(0mm,18mm){%
 		\begin{minipage}{\paperwidth}%
 			\noindent\begin{center}%
+				\normalsize
 				\rule{39em}{0.5pt}
 			\end{center}
 		\end{minipage}%
@@ -71,22 +79,25 @@
 	\noindent\begin{minipage}{\linewidth}
 		\flushright
 		\small
+		\sffamily
 		#1\par
 	\end{minipage}\par\vskip 20pt
 }
 \newcommand{\sendletterto}[1]{
 	\noindent\begin{minipage}{\linewidth}
+		\parskip=8pt
 		\small
+		\sffamily
 		#1\par
 	\end{minipage}\par\vskip 20pt
 }
 \newcommand{\lettersig}[1]{
 	\vskip 30pt
-    \vfill
+	\vfill
 	\noindent
-    \hfill
-    \begin{minipage}{15em}
+	\hfill
+	\begin{minipage}{15em}
 		#1\par
 	\end{minipage}\par
-    \vskip 30pt
+	\vskip 30pt
 }
